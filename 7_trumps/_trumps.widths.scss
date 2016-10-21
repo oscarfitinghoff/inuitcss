@@ -29,10 +29,6 @@
  * N.B. This option is turned off by default.
  */
 
-
-
-
-
 // Which fractions would you like in your grid system(s)? By default, inuitcss
 // provides you fractions of one whole, halves, thirds, quarters and fifths,
 // e.g.:
@@ -44,10 +40,6 @@
 
 $inuit-fractions: 1 2 3 4 5 !default;
 
-
-
-
-
 // Optionally, inuitcss can generate classes to offset items by a certain width.
 // Would you like to generate these types of class as well? E.g.:
 //
@@ -58,27 +50,15 @@ $inuit-fractions: 1 2 3 4 5 !default;
 
 $inuit-offsets: false !default;
 
-
-
-
-
 // By default, inuitcss uses fractions-like classes like `<div class="u-1/4">`.
 // You can change the `/` to whatever you fancy with this variable.
 $inuit-widths-delimiter: \/ !default;
-
-
-
-
 
 // When using Sass-MQ, this defines the separator for the breakpoints suffix
 // in the class name. By default, we are generating the responsive suffixes
 // for the classes with a `@` symbol so you get classes like:
 // <div class="u-3/12@mobile">
 $inuit-widths-breakpoint-separator: \@ !default;
-
-
-
-
 
 // A mixin to spit out our width classes. Pass in the columns we want the widths
 // to have, and an optional suffix for responsive widths. E.g. to create thirds
@@ -129,8 +109,6 @@ $inuit-widths-breakpoint-separator: \@ !default;
 }
 
 
-
-
 /**
  * A series of width helper classes that you can use to size things like grid
  * systems. Classes take a fraction-like format (e.g. `.u-2/3`). Use these in
@@ -143,8 +121,6 @@ $inuit-widths-breakpoint-separator: \@ !default;
  */
 
 @include inuit-widths($inuit-fractions);
-
-
 
 
 /**

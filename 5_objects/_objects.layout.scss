@@ -55,10 +55,6 @@
 // commenting out whitespace or minifying HTML.
 $inuit-use-markup-fix: false !default;
 
-
-
-
-
 /* Default/mandatory classes.
    ========================================================================== */
 
@@ -81,8 +77,6 @@ $inuit-use-markup-fix: false !default;
   }
 
 }
-
-
 /**
  * 1. Required in order to combine fluid widths with fixed gutters.
  * 2. Allows us to manipulate grids vertically, with text-level properties,
@@ -109,10 +103,6 @@ $inuit-use-markup-fix: false !default;
 
 }
 
-
-
-
-
 /* Gutter size modifiers.
    ========================================================================== */
 
@@ -124,8 +114,6 @@ $inuit-use-markup-fix: false !default;
   }
 
 }
-
-
 .o-layout--small {
   margin-left: -$inuit-global-spacing-unit-small;
 
@@ -134,8 +122,6 @@ $inuit-use-markup-fix: false !default;
   }
 
 }
-
-
 .o-layout--large {
   margin-left: -$inuit-global-spacing-unit-large;
 
@@ -144,8 +130,6 @@ $inuit-use-markup-fix: false !default;
   }
 
 }
-
-
 .o-layout--huge {
   margin-left: -$inuit-global-spacing-unit-huge;
 
@@ -154,8 +138,6 @@ $inuit-use-markup-fix: false !default;
   }
 
 }
-
-
 .o-layout--flush {
   margin-left: 0;
 
@@ -164,10 +146,6 @@ $inuit-use-markup-fix: false !default;
   }
 
 }
-
-
-
-
 
 /* Vertical alignment modifiers.
    ========================================================================== */
@@ -183,8 +161,6 @@ $inuit-use-markup-fix: false !default;
   }
 
 }
-
-
 /**
  * Align all grid items to the bottoms of each other.
  */
@@ -196,10 +172,6 @@ $inuit-use-markup-fix: false !default;
   }
 
 }
-
-
-
-
 
 /* Fill order modifiers.
    ========================================================================== */
@@ -216,8 +188,6 @@ $inuit-use-markup-fix: false !default;
   }
 
 }
-
-
 /**
  * Fill up the layout system from the right-hand side.
  */
@@ -230,8 +200,6 @@ $inuit-use-markup-fix: false !default;
   }
 
 }
-
-
 /**
  * Reverse the rendered order of the grid system.
  */

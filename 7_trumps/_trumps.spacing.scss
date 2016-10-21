@@ -36,8 +36,6 @@ $inuit-spacing-sizes: (
   '-huge': $inuit-global-spacing-unit-huge,
   '-none': 0
 ) !default;
-
-
 @each $property in $inuit-spacing-properties {
 
   @each $direction in $inuit-spacing-directions {

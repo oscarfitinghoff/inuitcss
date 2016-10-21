@@ -7,8 +7,6 @@
  * than simple font-size changes should likely be applied via classes (see:
  * http://csswizardry.com/2016/02/managing-typography-on-large-apps/).
  */
-
-
 // We have all of our heading font sizes defined here. Passing these pixel
 // values into our `inuit-font-size()` mixin will generate a rem-based
 // `font-size` with a pixel fallback, as well as generating a `line-height` that
@@ -20,8 +18,6 @@ $inuit-font-size-h3:  24px !default;
 $inuit-font-size-h4:  20px !default;
 $inuit-font-size-h5:  18px !default;
 $inuit-font-size-h6:  16px !default;
-
-
 h1 {
   @include inuit-font-size($inuit-font-size-h1);
 }

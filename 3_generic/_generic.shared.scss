@@ -23,8 +23,6 @@ table,
 fieldset {
   @include inuit-rem(margin-bottom, $inuit-global-spacing-unit);
 }
-
-
 /**
  * Consistent indentation for lists.
  */

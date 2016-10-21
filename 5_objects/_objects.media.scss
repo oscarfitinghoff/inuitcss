@@ -11,8 +11,6 @@
   @include inuit-clearfix();
   display: block;
 }
-
-
 .o-media__img {
   float: left;
   margin-right: $inuit-global-spacing-unit;
@@ -22,8 +20,6 @@
   }
 
 }
-
-
 .o-media__body {
   overflow: hidden;
   display: block;
@@ -34,10 +30,6 @@
   }
 
 }
-
-
-
-
 
 /* Size variants
    ========================================================================== */
@@ -63,8 +55,6 @@
   }
 
 }
-
-
 .o-media--small {
 
   > .o-media__img {
@@ -81,8 +71,6 @@
   }
 
 }
-
-
 .o-media--large {
 
   > .o-media__img {
@@ -99,8 +87,6 @@
   }
 
 }
-
-
 .o-media--huge {
 
   > .o-media__img {
@@ -118,10 +104,6 @@
 
 }
 
-
-
-
-
 /* Reversed media objects
    ========================================================================== */
 
@@ -134,10 +116,6 @@
   }
 
 }
-
-
-
-
 
 /* Gutterless media objects
    ========================================================================== */
