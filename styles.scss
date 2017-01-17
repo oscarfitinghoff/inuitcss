@@ -75,56 +75,56 @@
  */
 
 // SETTINGS
-@import "settings/example.settings.config";
-@import "settings/settings.core";
-@import "settings/example.settings.global";
+@import "1_settings/example.settings.config";
+@import "1_settings/settings.core";
+@import "1_settings/example.settings.global";
 
 // TOOLS
-@import "tools/tools.rem";
-@import "tools/tools.font-size";
-@import "tools/tools.clearfix";
-@import "tools/tools.hidden";
-@import "node_modules/sass-mq/mq";
+@import "2_tools/tools.rem";
+@import "2_tools/tools.font-size";
+@import "2_tools/tools.clearfix";
+@import "2_tools/tools.hidden";
+//@import "node_modules/sass-mq/mq";
 
 // GENERIC
-@import "generic/generic.box-sizing";
-@import "generic/generic.normalize";
-@import "generic/generic.reset";
-@import "generic/generic.shared";
+@import "3_generic/generic.box-sizing";
+@import "3_generic/generic.normalize";
+@import "3_generic/generic.reset";
+@import "3_generic/generic.shared";
 
 // ELEMENTS
-@import "elements/elements.page";
-@import "elements/elements.headings";
-@import "elements/elements.images";
-@import "elements/elements.tables";
+@import "4_elements/elements.page";
+@import "4_elements/elements.headings";
+@import "4_elements/elements.images";
+@import "4_elements/elements.tables";
 
 // OBJECTS
 //
 // Uncomment and add to this section as necessary.
-@import "objects/objects.wrapper";
-@import "objects/objects.layout";
-@import "objects/objects.media";
-@import "objects/objects.flag";
-@import "objects/objects.list-bare";
-@import "objects/objects.list-inline";
-@import "objects/objects.box";
-@import "objects/objects.block";
-@import "objects/objects.ratio";
-@import "objects/objects.crop";
-@import "objects/objects.tables";
-@import "objects/objects.pack";
+@import "5_objects/objects.wrapper";
+@import "5_objects/objects.layout";
+@import "5_objects/objects.media";
+@import "5_objects/objects.flag";
+@import "5_objects/objects.list-bare";
+@import "5_objects/objects.list-inline";
+@import "5_objects/objects.box";
+@import "5_objects/objects.block";
+@import "5_objects/objects.ratio";
+@import "5_objects/objects.crop";
+@import "5_objects/objects.tables";
+@import "5_objects/objects.pack";
 
 // COMPONENTS
 //
 // Build and include your project’s UI Compoments here.
-@import "components/example.components.buttons";
+@import "6_components/example.components.buttons";
 
 // UTILITIES
-@import "utilities/utilities.clearfix";
+@import "7_trumps/trumps.clearfix";
 
 $inuit-offsets: true;
-@import "utilities/utilities.widths";
-@import "utilities/utilities.headings";
-@import "utilities/utilities.spacing";
-@import "utilities/utilities.print";
-@import "utilities/utilities.hide";
+@import "7_trumps/trumps.widths";
+@import "7_trumps/trumps.headings";
+@import "7_trumps/trumps.spacing";
+@import "7_trumps/trumps.print";
+@import "7_trumps/trumps.hide";
