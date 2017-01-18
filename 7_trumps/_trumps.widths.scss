@@ -29,6 +29,10 @@
  * N.B. This option is turned off by default.
  */
 
+
+
+
+
 // Which fractions would you like in your grid system(s)? By default, inuitcss
 // provides you fractions of one whole, halves, thirds, quarters and fifths,
 // e.g.:
@@ -38,7 +42,11 @@
 //   .u-3/4
 //   .u-2/3
 
-$inuit-fractions: 1 2 3 4 5 !default;
+$fractions: 1 2 3 4 5 !default;
+
+
+
+
 
 // Optionally, inuitcss can generate classes to offset items by a certain width.
 // Would you like to generate these types of class as well? E.g.:
@@ -48,17 +56,29 @@ $inuit-fractions: 1 2 3 4 5 !default;
 //   .u-pull-1/5
 //   .u-push-2/3
 
-$inuit-offsets: false !default;
+$offsets: false !default;
+
+
+
+
 
 // By default, inuitcss uses fractions-like classes like `<div class="u-1/4">`.
 // You can change the `/` to whatever you fancy with this variable.
-$inuit-widths-delimiter: \/ !default;
+$widths-delimiter: \/ !default;
+
+
+
+
 
 // When using Sass-MQ, this defines the separator for the breakpoints suffix
 // in the class name. By default, we are generating the responsive suffixes
 // for the classes with a `@` symbol so you get classes like:
 // <div class="u-3/12@mobile">
-$inuit-widths-breakpoint-separator: \@ !default;
+$widths-breakpoint-separator: \@ !default;
+
+
+
+
 
 // A mixin to spit out our width classes. Pass in the columns we want the widths
 // to have, and an optional suffix for responsive widths. E.g. to create thirds
@@ -66,7 +86,7 @@ $inuit-widths-breakpoint-separator: \@ !default;
 //
 // @include widths(3 4, -sm);
 
-@mixin inuit-widths($columns, $breakpoint: null) {
+@mixin widths($columns, $breakpoint: null) {
 
   // Loop through the number of columns for each denominator of our fractions.
   @each $denominator in $columns {
@@ -76,25 +96,25 @@ $inuit-widths-breakpoint-separator: \@ !default;
     @for $numerator from 1 through $denominator {
 
       // Build a class in the format `.u-3/4[@<breakpoint>]`.
-      .u-#{$numerator}#{$inuit-widths-delimiter}#{$denominator}#{$breakpoint} {
+      .u-#{$numerator}#{$widths-delimiter}#{$denominator}#{$breakpoint} {
         width: ($numerator / $denominator) * 100% !important;
       }
 
-      @if ($inuit-offsets == true) {
+      @if ($offsets == true) {
 
         /**
         * 1. Defensively reset any leftover or conflicting `left`/`right` values.
         */
 
         // Build a class in the format `.u-push-1/2[@<breakpoint>]`.
-        .u-push-#{$numerator}#{$inuit-widths-delimiter}#{$denominator}#{$breakpoint} {
+        .u-push-#{$numerator}#{$widths-delimiter}#{$denominator}#{$breakpoint} {
           position: relative;
           right: auto; /* [1] */
           left: ($numerator / $denominator) * 100% !important;
         }
 
         // Build a class in the format `.u-pull-5/6[@<breakpoint>]`.
-        .u-pull-#{$numerator}#{$inuit-widths-delimiter}#{$denominator}#{$breakpoint} {
+        .u-pull-#{$numerator}#{$widths-delimiter}#{$denominator}#{$breakpoint} {
           position: relative;
           right: ($numerator / $denominator) * 100% !important;
           left: auto; /* [1] */
@@ -109,6 +129,8 @@ $inuit-widths-breakpoint-separator: \@ !default;
 }
 
 
+
+
 /**
  * A series of width helper classes that you can use to size things like grid
  * systems. Classes take a fraction-like format (e.g. `.u-2/3`). Use these in
@@ -117,10 +139,12 @@ $inuit-widths-breakpoint-separator: \@ !default;
  * <div class="u-7/12">
  *
  * The following will generate widths helper classes based on the fractions
- * defined in the `$inuit-fractions` list.
+ * defined in the `$fractions` list.
  */
 
-@include inuit-widths($inuit-fractions);
+@include widths($fractions);
+
+
 
 
 /**
@@ -132,10 +156,10 @@ $inuit-widths-breakpoint-separator: \@ !default;
 
 @if (variable-exists(mq-breakpoints)) {
 
-  @each $inuit-bp-name, $inuit-bp-value in $mq-breakpoints {
+  @each $bp-name, $bp-value in $mq-breakpoints {
 
-    @include mq($from: $inuit-bp-name) {
-      @include inuit-widths($inuit-fractions, #{$inuit-widths-breakpoint-separator}#{$inuit-bp-name});
+    @include mq($from: $bp-name) {
+      @include widths($fractions, #{$widths-breakpoint-separator}#{$bp-name});
     }
 
   }

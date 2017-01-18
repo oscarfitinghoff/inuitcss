@@ -53,7 +53,11 @@
 // By default we use the `font-size: 0;` trick to remove whitespace between
 // items. Set this to true in order to use a markup-based strategy like
 // commenting out whitespace or minifying HTML.
-$inuit-use-markup-fix: false !default;
+$use-markup-fix: false !default;
+
+
+
+
 
 /* Default/mandatory classes.
    ========================================================================== */
@@ -70,13 +74,15 @@ $inuit-use-markup-fix: false !default;
   margin:  0; /* [2] */
   padding: 0; /* [2] */
   list-style: none; /* [1] */
-  margin-left: -$inuit-global-spacing-unit; /* [3] */
+  margin-left: -$global-spacing-unit; /* [3] */
 
-  @if ($inuit-use-markup-fix == false) {
+  @if ($use-markup-fix == false) {
     font-size: 0;
   }
 
 }
+
+
 /**
  * 1. Required in order to combine fluid widths with fixed gutters.
  * 2. Allows us to manipulate grids vertically, with text-level properties,
@@ -94,50 +100,62 @@ $inuit-use-markup-fix: false !default;
   display: inline-block; /* [2] */
   vertical-align: top; /* [3] */
   width: 100%; /* [4] */
-  padding-left: $inuit-global-spacing-unit; /* [5] */
+  padding-left: $global-spacing-unit; /* [5] */
 
-  @if ($inuit-use-markup-fix == false) {
-    font-size: $inuit-global-font-size; /* [6] */
+  @if ($use-markup-fix == false) {
+    font-size: $global-font-size; /* [6] */
     font-size: 1rem;
   }
 
 }
 
+
+
+
+
 /* Gutter size modifiers.
    ========================================================================== */
 
 .o-layout--tiny {
-  margin-left: -$inuit-global-spacing-unit-tiny;
+  margin-left: -$global-spacing-unit-tiny;
 
   > .o-layout__item {
-    padding-left: $inuit-global-spacing-unit-tiny;
+    padding-left: $global-spacing-unit-tiny;
   }
 
 }
+
+
 .o-layout--small {
-  margin-left: -$inuit-global-spacing-unit-small;
+  margin-left: -$global-spacing-unit-small;
 
   > .o-layout__item {
-    padding-left: $inuit-global-spacing-unit-small;
+    padding-left: $global-spacing-unit-small;
   }
 
 }
+
+
 .o-layout--large {
-  margin-left: -$inuit-global-spacing-unit-large;
+  margin-left: -$global-spacing-unit-large;
 
   > .o-layout__item {
-    padding-left: $inuit-global-spacing-unit-large;
+    padding-left: $global-spacing-unit-large;
   }
 
 }
+
+
 .o-layout--huge {
-  margin-left: -$inuit-global-spacing-unit-huge;
+  margin-left: -$global-spacing-unit-huge;
 
   > .o-layout__item {
-    padding-left: $inuit-global-spacing-unit-huge;
+    padding-left: $global-spacing-unit-huge;
   }
 
 }
+
+
 .o-layout--flush {
   margin-left: 0;
 
@@ -146,6 +164,10 @@ $inuit-use-markup-fix: false !default;
   }
 
 }
+
+
+
+
 
 /* Vertical alignment modifiers.
    ========================================================================== */
@@ -161,6 +183,8 @@ $inuit-use-markup-fix: false !default;
   }
 
 }
+
+
 /**
  * Align all grid items to the bottoms of each other.
  */
@@ -172,6 +196,10 @@ $inuit-use-markup-fix: false !default;
   }
 
 }
+
+
+
+
 
 /* Fill order modifiers.
    ========================================================================== */
@@ -188,6 +216,8 @@ $inuit-use-markup-fix: false !default;
   }
 
 }
+
+
 /**
  * Fill up the layout system from the right-hand side.
  */
@@ -200,6 +230,8 @@ $inuit-use-markup-fix: false !default;
   }
 
 }
+
+
 /**
  * Reverse the rendered order of the grid system.
  */

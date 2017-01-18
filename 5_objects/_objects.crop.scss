@@ -4,11 +4,13 @@
 
 // A list of cropping ratios that get generated as modifier classes.
 
-$inuit-crops: (
+$crops: (
   (2:1),
   (4:3),
   (16:9),
 ) !default;
+
+
 
 /**
  * Provide a cropping container in order to display media (usually images)
@@ -23,6 +25,8 @@ $inuit-crops: (
   display: block;
   overflow: hidden; /* [2] */
 }
+
+
 /**
  * Apply this class to the content (usually `img`) that needs cropping.
  *
@@ -36,6 +40,8 @@ $inuit-crops: (
   left: 0; /* [1] */
   max-width: none; /* [2] */
 }
+
+
 /**
  * We can position the media in different locations within the cropping area.
  */
@@ -56,6 +62,8 @@ $inuit-crops: (
   transform: translate(-50%, -50%);
 }
 
+
+
 /* stylelint-disable */
 
 /* Crop-ratio variants.
@@ -68,7 +76,7 @@ $inuit-crops: (
  *
  */
 
-@each $crop in $inuit-crops {
+@each $crop in $crops {
 
   @each $antecedent, $consequent in $crop {
 

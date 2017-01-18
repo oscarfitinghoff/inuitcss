@@ -4,7 +4,7 @@
 
 // Convert any px value into its rem equivalent.
 
-@function inuit-rem($value) {
+@function rem($value) {
 
   @if (type-of($value) == number) {
 
@@ -16,17 +16,19 @@
     @error "`#{$value}` needs to be a number.";
   }
 
-  @return $value / $inuit-global-font-size * 1rem;
+  @return $value / $global-font-size * 1rem;
 
 }
+
+
 // Mixin to create a declaration whose value is a rem unit. Also provide pixel
 // fallback.
 //
 // .simple-usage {
-//   @include inuit-rem(padding, 10px);
+//   @include rem(padding, 10px);
 // }
 
-@mixin inuit-rem($property, $value) {
+@mixin rem($property, $value) {
 
   @if (type-of($value) == number) {
 
@@ -41,6 +43,6 @@
   // We provide a `px` fallback for old IEs not supporting `rem` values.
   #{$property}: $value;
 
-  #{$property}: inuit-rem($value);
+  #{$property}: rem($value);
 
 }

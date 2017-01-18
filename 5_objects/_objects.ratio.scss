@@ -4,11 +4,13 @@
 
 // A list of aspect ratios that get generated as modifier classes.
 
-$inuit-ratios: (
+$ratios: (
   (2:1),
   (4:3),
   (16:9),
 ) !default;
+
+
 
 /**
  * Create ratio-bound content blocks, to keep media (e.g. images, videos) in
@@ -32,6 +34,8 @@ $inuit-ratios: (
   }
 
 }
+
+
 .o-ratio__content,
 .o-ratio > iframe,
 .o-ratio > embed,
@@ -43,6 +47,8 @@ $inuit-ratios: (
   height: 100%;
   width:  100%;
 }
+
+
 
 /* stylelint-disable */
 
@@ -56,7 +62,7 @@ $inuit-ratios: (
  *
  */
 
-@each $ratio in $inuit-ratios {
+@each $ratio in $ratios {
 
   @each $antecedent, $consequent in $ratio {
 
