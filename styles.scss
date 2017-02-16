@@ -77,7 +77,7 @@
 // SETTINGS
 @import "1_settings/example.settings.config";
 @import "1_settings/settings.core";
-@import "1_settings/example.settings.global";
+@import "1_settings/settings.global";
 
 // TOOLS
 @import "2_tools/tools.rem";
@@ -117,7 +117,7 @@
 // COMPONENTS
 //
 // Build and include your project’s UI Compoments here.
-@import "6_components/example.components.buttons";
+@import "6_components/components.buttons";
 
 // UTILITIES
 @import "7_trumps/trumps.clearfix";
