@@ -84,7 +84,7 @@
 @import "2_tools/tools.font-size";
 @import "2_tools/tools.clearfix";
 @import "2_tools/tools.hidden";
-//@import "node_modules/sass-mq/mq";
+@import "2_tools/tools.mq";
 
 // GENERIC
 @import "3_generic/generic.box-sizing";
